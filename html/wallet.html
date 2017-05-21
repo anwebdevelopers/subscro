@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>SUBSCRO</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body class="page">
+
+	<!--=============== header  ===============-->
+	<header class="py-3 bg-white">
+		<div class="container">
+			<div class="row">
+
+				<!-- column left -->
+				<div class="col-12 col-sm text-center text-sm-left">
+					<img src="img/logo-small.png" class="img-responsive" alt="">
+
+					<!-- header-nav -->
+					<ul class="header-nav">
+						<li><a href="#">Apr</a></li>
+						<li><a href="#">May: $ 19 520 / 7 subscriptions</a></li>
+						<li><a href="#">Jun</a></li>
+						<li><a href="#">All 9 subscriptions</a></li>
+					</ul>
+				</div>
+
+				<!-- column right -->
+				<div class="col-12 col-sm mt-4 mt-sm-0 text-center text-sm-right">
+					<p class="text-muted mb-2">Your bonus: 0.00000037 BTC</p>
+					<span><a href="#" class="no-underline">Jhon Dow</a> / <a href="#">Exit</a></span>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!--=============== main  ===============-->
+	<main class="pt-4 pb-5">
+		<form class="container">
+			<div class="form-group row">
+
+				<!-- form-group withdraw -->
+				<label for="withdraw" class="form-control-label col-12">Withdraw, min: 0.0001 BTC</label>
+				<div class="col-sm-8 col-md-6 col-lg-5">
+					<div class="input-group">
+						<div class="input-group-addon">BTC</div>
+						<input type="text" id="withdraw" class="form-control" placeholder="0.00000037">
+					</div>
+				</div>
+			</div>
+
+			<!-- form-group wallet -->
+			<div class="form-group row mt-4">
+				<label for="wallet" class="form-control-label col-12">Wallet Addres</label>
+				<div class="col-sm-8 col-md-6 col-lg-5">
+					<input type="text" id="wallet" class="form-control" placeholder="Wallet Addres">
+				</div>
+			</div>
+			<p class="form-text">The withdrawal of funds is carried out after the moderator checks, we reserve the right to suspend payments up to 48 hours.</p>
+
+			<!-- button submit -->
+			<div class="form-group mt-5">
+				<button type="submit" class="btn btn-primary py-3 px-4">Withdraw</button><button type="button" class="btn btn-link">Cancel</button>
+			</div>
+
+			<!-- button submit error -->
+			<div class="form-group mt-5 has-danger">
+				<p class="form-control-feedback">The transfer was not carried out, check the amount, it should be more than 0.0001BTC and within your balance.</p>
+				<button type="submit" class="btn btn-primary py-3 px-4">Withdraw</button><button type="button" class="btn btn-link">Cancel</button>
+			</div>
+
+			<!-- button submit success -->
+			<div class="form-group mt-5 has-success">
+				<p class="form-control-feedback">Ok, wait until 48h</p>
+				<button type="submit" class="btn btn-primary py-3 px-4">Withdraw</button><button type="button" class="btn btn-link">Cancel</button>
+			</div>
+		</form>
+	</main>
+
+	<!--=============== footer  ===============-->
+	<footer class="mt-auto py-3 bg-white">
+		<div class="container">
+			<div class="row">
+
+				<!-- column left -->
+				<div class="col-12 col-sm text-center text-sm-left">
+					<p class="text-muted mb-0">Manage subscriptions & recurring payments</p>
+				</div>
+
+				<!-- column right -->
+				<div class="col-12 col-sm mt-4 mt-sm-0 text-center text-sm-right">
+					<p class="text-muted mb-0">Copyright 2017  /  Subscro.com</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- Load Scripts Start -->
+	<script src="js/libs.js" defer></script>
+	<script src="js/common.js" defer></script>
+	<!-- Load Scripts End -->
+
+</body>
+</html>
