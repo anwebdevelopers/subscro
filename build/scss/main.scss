@@ -2,6 +2,9 @@
 @import "html/libs/font-awesome-4.7.0/scss/font-awesome.scss";
 @import "html/libs/bootstrap/css/bootstrap.min";
 @import "html/libs/bootstrap-datetimepicker-0.0.11/css/bootstrap-datetimepicker.min";
+@import "html/libs/jQueryFormStyler/dist/jquery.formstyler";
+@import "html/libs/jQueryFormStyler/dist/jquery.formstyler.theme";
+
 
 *:focus::-webkit-input-placeholder {color: transparent}
 *:focus::-moz-placeholder          {color: transparent}
@@ -12,7 +15,7 @@ h1, h2, h3, h4, h5, h6 {
 	color: #333;
 }
 html {
-	font-size: 13px;
+	font-size: 16px;
 	height: 100%;
 }
 body {
@@ -247,16 +250,20 @@ select.form-control {
 }
 .subscribtion {
 	flex-grow: 1;
+	display: block;
+	width: 100%;
 	text-decoration: none;
 	&:hover, &:active, &:focus {
 		color: #fff;
 		text-decoration: none;
+		box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 30px, rgba(0, 0, 0, 0.23) 0px 6px 10px;
 	}
 	min-height: 10rem;
 	color: #fff;
 	border-radius: 6px;
 	background-color: #ccc;
-	box-shadow: 0 7px 27px 0 transparentize(#000, .8);
+	box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+	transition: all .5s ease;
 
 	&.price_0--5 {
 		background-color: #E1D00E;
@@ -404,24 +411,37 @@ select.form-control {
 .subscribtion__category {
 	flex: 0 1 auto;
 	font-weight: 600;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 .subscribtion__date {
 	flex: 0 1 auto;
+	white-space: nowrap;
 }
 .subscribtion__box {
 	padding: 1rem;
 }
 .subscribtion__name {
 	margin: 0;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 .subscribtion__price {
 	margin: .5rem 0 0 0;
 	font-size: 1.125rem;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 .subscribtion__status {
 	position: relative;
 	margin: .5rem 0 0 0;
 	padding: 0 0 0 1.5rem;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 	&:before {
 		content: '';
 		position: absolute;
@@ -430,7 +450,7 @@ select.form-control {
 		width: 1rem;
 		height: 1rem;
 		border-radius: 50%;
-		border: 2px solid #fff;
+		border: 2px solid #f1f4f5;
 	}
 }
 .add-subscribtion {
@@ -473,12 +493,58 @@ select.form-control {
 .bootstrap-datetimepicker-widget {
 	font-size: .8rem;
 }
+.jq-selectbox {
+	display: block;
+	&:focus {
+		outline: none;
+	}
+	&.focused {
+		.jq-selectbox__select {
+			border-color: #5cb3fd;
+		}
+
+	}
+}
+.jq-selectbox__select {
+    height: 38px;
+	box-shadow: none;
+	background: none;
+	background-color: #fff;
+	outline: none;
+	border: 1px solid rgba(0,0,0,.15);
+	font-family: inherit;
+	&:active {
+	    box-shadow: none;
+	}
+	&:hover {
+		background-image: none;
+		background-color: #fff;
+	}
+	&:focus {
+		border-color: #5cb3fd;
+	}
+}
+.jq-selectbox li:hover {
+    background-color: #f5f5f5;
+	color: #464a4c;
+}
+.jq-selectbox__select-text {
+	font-size: 1rem;
+	line-height: 38px;
+	color: #636c72;
+	font-weight: 350;
+	text-shadow: none;
+}
+.jq-selectbox__trigger {
+	border: none;
+}
+.jq-selectbox__trigger-arrow {
+    top: 18px;
+}
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-	html {
-		font-size: 13px;
-	}
+
 	.footer-nav {
 		justify-content: flex-start;
 	}
@@ -489,9 +555,7 @@ select.form-control {
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-	html {
-		font-size: 14px;
-	}
+
 	.mb-sm--36 {
 		margin-bottom: -21rem!important;
 	}
@@ -502,14 +566,12 @@ select.form-control {
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-	html {
-		font-size: 15px;
-	}
+
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-	html {
-		font-size: 16px;
+	.container {
+	    width: 1200px;
 	}
 }

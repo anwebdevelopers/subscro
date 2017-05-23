@@ -13,9 +13,17 @@ $(function() {
     });
 
     //------------------------------------------------------
+    //Form Styler
+    //------------------------------------------------------
+    $('select.form-control').styler({
+        onFormStyled: function() {
+            $('.jq-selectbox').removeClass('form-control');
+        }
+    });
+
+    //------------------------------------------------------
     //Datetimepicker
     //------------------------------------------------------
-
     $('[data-toggle="datetimepicker"]').datetimepicker({
       pickTime: false
     });

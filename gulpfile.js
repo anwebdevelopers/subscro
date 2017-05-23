@@ -65,6 +65,7 @@ gulp.task('scripts', function() {
         './html/libs/tether-1.3.3/dist/js/tether.min.js',
         './html/libs/bootstrap/js/bootstrap.min.js',
         './html/libs/bootstrap-datetimepicker-0.0.11/js/bootstrap-datetimepicker.min.js',
+        './html/libs/jQueryFormStyler/dist/jquery.formstyler.min.js',
 		//'./html/libs/waypoints/waypoints.min.js',
 		//'./html/libs/animate/animate-css.js',
 		'./html/libs/plugins-scroll/plugins-scroll.js',
